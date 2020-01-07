@@ -1,0 +1,40 @@
+{
+  "name": "@leandrovboas/cli-download-video",
+  "version": "1.0.0",
+  "description": "Essa command line tem a função de baixar videos da internet",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js",
+    "testeWatch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandrovboas/cli-download-video.git"
+  },
+  "keywords": [
+    "download;",
+    "videos;",
+    "youtube"
+  ],
+  "author": {
+    "name": "Leandro Vilas Boas",
+    "email": "leandrovboas@msn.com",
+    "url": "https://medium.com/@leandrovboas"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leandrovboas/cli-download-video/issues"
+  },
+  "homepage": "https://github.com/leandrovboas/cli-download-video#readme",
+  "bin": {
+    "download-videos": "index.js"
+  },
+  "dependencies": {
+    "commander": "4.1.0",
+    "youtube-dl": "^2.3.0"
+  },
+  "devDependencies": {
+    "jest": "24.9.0"
+  }
+}
