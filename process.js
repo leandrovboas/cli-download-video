@@ -1,19 +1,24 @@
 const fs = require('fs')
-const youtubedl = require('youtube-dl') 
-const outputname = ""
+const util = require('util');
+const youtubedl = require('youtube-dl')
 
-async function download (url, path){
+const promisifiedGetInfo = util.promisify(youtubedl.getInfo)
+
+async function Download (url, infoVideo){
     const video = youtubedl(url, ['--format=18'],{cwd: __dirname})
-    video.on('info', (info) => {
-        console.log('Download Started')
-        console.log(`FileName: ${info._filename}`)
-        console.log(`size: ${info.size}`)
-        outputname = info._filename
-    })
 
-    video.pipe(fs.createWriteStream(`${outputname}.mp4`))
+    console.log(`FileName: ${infoVideo._filename}`)
+    console.log(`size: ${infoVideo.size}`)
+
+    video.pipe(fs.createWriteStream(`${infoVideo.title}.mp4`))
+}
+
+function GetInfoVideo(url){
+    return promisifiedGetInfo(url, [])
+        .catch(err => console.log(err));
 }
 
 module.exports = {
-    download
+    Download,
+    GetInfoVideo
 }

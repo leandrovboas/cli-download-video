@@ -11,8 +11,13 @@ program
     .command('download <url>')
     .description('Realiza o download de um video a partir da url informada')
     .option('-p, --path [path]', 'Realiza o download do video no caminho informado')
-    .action((url, option) =>{
-        exec.download(url)
+    .action(async (url, option) =>{
+        console.log('=====> Download Started')
+
+        let infoVideo = await exec.GetInfoVideo(url)
+        await exec.Download(url, infoVideo)
+
+        console.log('=====> Download Finish')
     })
 
 program.parse(process.argv)
