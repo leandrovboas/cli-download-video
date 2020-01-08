@@ -10,7 +10,7 @@
             "name": "Download",
             "program": "${workspaceFolder}/index.js",
             "args": [
-              "download", "https://www.youtube.com/watch?v=ZCos2uzsxmM", "-p", "c:\\"
+              "download", "https://www.youtube.com/watch?v=ZCos2uzsxmM", "-f", "22", "-p", "c:\\"
             ],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
