@@ -30,6 +30,9 @@
   "bin": {
     "download-videos": "index.js"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "commander": "4.1.0",
     "youtube-dl": "^2.3.0"
