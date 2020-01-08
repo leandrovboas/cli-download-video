@@ -1,5 +1,5 @@
 {
-  "name": "@leandrovboas/cli-download-video",
+  "name": "cli-get-video",
   "version": "1.0.0",
   "description": "Essa command line tem a função de baixar videos da internet",
   "main": "index.js",
@@ -29,9 +29,6 @@
   "homepage": "https://github.com/leandrovboas/cli-download-video#readme",
   "bin": {
     "download-videos": "index.js"
-  },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
   },
   "dependencies": {
     "commander": "4.1.0",
