@@ -15,7 +15,7 @@ program
         console.log('=====> Download Started')
 
         let infoVideo = await exec.GetInfoVideo(url)
-        await exec.Download(url, infoVideo)
+        await exec.Download(url, infoVideo, option.path)
 
         console.log('=====> Download Finish')
     })

@@ -4,14 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
          {
             "type": "node",
             "request": "launch",
             "name": "Download",
             "program": "${workspaceFolder}/index.js",
             "args": [
-              "download", "https://www.youtube.com/watch?v=ZCos2uzsxmM", "-p", "c:"
+              "download", "https://www.youtube.com/watch?v=ZCos2uzsxmM", "-p", "c:\\"
             ],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
