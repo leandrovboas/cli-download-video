@@ -17,10 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build
+    - name: npm install, build, publish
       run: |
         npm ci
         npm run build --if-present
+        npm login --registry=https://npm.pkg.github.com/
         npm publish
       env:
         CI: true
