@@ -21,7 +21,20 @@ async function Download (url, infoVideo, path, format = 18){
         console.log("")
         this.spinner = ora({
         	text: "Download...", 
-            spinner: {frames:["◜", "◠",	"◝", "◞", "◡", "◟"]}
+            spinner: {
+                interval: 80,
+		        frames: [
+		            	"⠋",
+		            	"⠙",
+		            	"⠹",
+		            	"⠸",
+		            	"⠼",
+		            	"⠴",
+		            	"⠦",
+		            	"⠧",
+		            	"⠇",
+                        "⠏"
+                    ]}
         }).start();
     })
 
