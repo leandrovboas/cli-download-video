@@ -20,12 +20,10 @@ program
             return
         }
 
-        console.log('=====> Download Started')
 
         let infoVideo = await exec.GetInfoVideo(url)
         await exec.Download(url, infoVideo, option.path, option.format)
 
-        console.log('=====> Download Finish')
     })
 
 program.parse(process.argv)
