@@ -1,6 +1,6 @@
 {
   "name": "cli-get-video",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Essa command line tem a função de baixar videos da internet",
   "main": "index.js",
   "scripts": {
