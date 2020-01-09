@@ -35,6 +35,5 @@
     "youtube-dl": "^2.3.0"
   },
   "devDependencies": {
-    "jest": "24.9.0"
   }
 }
